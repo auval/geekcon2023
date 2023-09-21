@@ -19,7 +19,8 @@ function fetchResponse() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log("data"  + data)
+        console.log("data"  + data);
+        console.log("data.choices"  + data.choices[0]);
         const text = data.choices && data.choices[0] && data.choices[0].text;
         document.getElementById('response').innerText = text;
     })
