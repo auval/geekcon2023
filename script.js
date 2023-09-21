@@ -3,7 +3,7 @@ function fetchResponse() {
     const apiKey = document.getElementById('apiKey').value;
     const prompt = document.getElementById('prompt').value;
 
-    const url = "https://api.openai.com/v1/engines/davinci/completions";
+    const url = "https://api.openai.com/v1/chat/completions";
     const body = {
         prompt: prompt,
         max_tokens: 150
