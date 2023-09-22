@@ -14,7 +14,7 @@ function fetchResponse() {
     const url = "https://api.openai.com/v1/chat/completions";
     
     const messages = [
-        {"role": "system", "content": prefix.value },
+        {"role": "system", "content": prefix},
         {"role": "user", "content": prompt}
     ];
     const body = {
