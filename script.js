@@ -5,6 +5,7 @@ function fetchResponse() {
     const prefix = document.getElementById('prefix').value;
 
 
+    console.log("Prefix = " +prefix);
 
     // Store the API key as a cookie
     document.cookie = `apiKey=${apiKey}`;
