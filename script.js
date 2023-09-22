@@ -10,10 +10,10 @@ function fetchResponse() {
     // Store the API key as a cookie
     document.cookie = `apiKey=${apiKey}`;
 
-    
+
     //   const url = "https://api.openai.com/v1/engines/davinci/completions";
     const url = "https://api.openai.com/v1/chat/completions";
-    
+
     const messages = [
         {"role": "system", "content": prefix},
         {"role": "user", "content": prompt}
