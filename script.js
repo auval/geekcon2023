@@ -28,7 +28,8 @@ function fetchResponse() {
         console.log("response"  + response);
       //  console.log("error"  + error);
         console.log("data.choices"  + data.choices);
-        const text = data.choices && data.choices[0] && data.choices[0].text;
+        //const text = data.choices && data.choices[0] && data.choices[0].text;
+        const text = data.choices && data.choices[0] && data.choices[0].message.content;
         document.getElementById('response').innerText = text;
     })
     .catch(error => {
