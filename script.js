@@ -39,6 +39,7 @@ function fetchResponse() {
         //const text = data.choices && data.choices[0] && data.choices[0].text;
         const text = data.choices && data.choices[0] && data.choices[0].message.content;
         document.getElementById('response').innerText = text;
+        generateImageFromPrompt(text);
     })
     .catch(error => {
         console.error("Error:", error);

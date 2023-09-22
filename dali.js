@@ -1,7 +1,7 @@
-async function generateImage() {
+async function generateImageFromPrompt(promptText) {
     const endpoint = "https://api.openai.com/v1/images/generations";
     const apiKey = document.getElementById('apiKey').value;
-    const promptText = document.getElementById('prompt').value;
+//    const promptText = document.getElementById('prompt').value;
 
     const requestBody = {
         prompt: promptText,

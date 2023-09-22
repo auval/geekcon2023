@@ -10,14 +10,15 @@
 <input id="prefix" placeholder="geekcon project description" type="text"
        value="You are a participant in a hachathon called Geekcon, which takes place
                 in Sdot Yam, Israel, every September. I will give you a project idea in the prompt
-                and you will write a few pages long description of this project
-                and what is need to build it (unless i specify that). if my prompt is empty,
+                and you will write a detailed prompt for dall-e-2 of this project, that will produce an image quality photograph of the result.
+                above the specimen put a sign with the name of the project.
+                if my prompt is empty,
                 come up with a crazy idea by yourself.
                 the project needs to be funny , geeky and with no practical use">
 <input id="prompt" placeholder="Enter your prompt" type="text">
 <button onclick="fetchResponse()">Fetch Response</button>
 
-<button onclick="generateImage()">Generate Image</button>
+<!--<button onclick="generateImage()">Generate Image</button>-->
 
 
 <div id="response"></div>
