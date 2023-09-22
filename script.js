@@ -2,7 +2,7 @@
 function fetchResponse() {
     const apiKey = document.getElementById('apiKey').value;
     const prompt = document.getElementById('prompt').value;
-    const prefix = document.getElementById('prompt').value;
+    const prefix = document.getElementById('prefix').value;
 
 
 
