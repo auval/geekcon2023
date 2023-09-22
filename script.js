@@ -2,12 +2,14 @@
 function fetchResponse() {
     const apiKey = document.getElementById('apiKey').value;
     const prompt = document.getElementById('prompt').value;
+    const prefix = document.getElementById('prompt').value;
 
+    
  //   const url = "https://api.openai.com/v1/engines/davinci/completions";
     const url = "https://api.openai.com/v1/chat/completions";
     
     const messages = [
-        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "system", "content": prefix.value },
         {"role": "user", "content": prompt}
     ];
     const body = {
