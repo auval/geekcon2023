@@ -4,8 +4,13 @@ function fetchResponse() {
     const prompt = document.getElementById('prompt').value;
     const prefix = document.getElementById('prompt').value;
 
+
+
+    // Store the API key as a cookie
+    document.cookie = `apiKey=${apiKey}`;
+
     
- //   const url = "https://api.openai.com/v1/engines/davinci/completions";
+    //   const url = "https://api.openai.com/v1/engines/davinci/completions";
     const url = "https://api.openai.com/v1/chat/completions";
     
     const messages = [
@@ -39,3 +44,17 @@ function fetchResponse() {
         document.getElementById('response').innerText = "Error: " + error.message;
     });
 }
+
+
+// Retrieve the API key from the cookie when the page loads
+window.addEventListener('load', function () {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+        const [name, value] = cookie.trim().split('=');
+        if (name === 'apiKey') {
+            // Set the API key input field to the stored value
+            document.getElementById('apiKey').value = value;
+            break;
+        }
+    }
+});
