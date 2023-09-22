@@ -26,7 +26,7 @@ function fetchResponse() {
     .then(response => response.json())
     .then(data => {
         console.log("response"  + response);
-        console.log("error"  + error);
+      //  console.log("error"  + error);
         console.log("data.choices"  + data.choices);
         const text = data.choices && data.choices[0] && data.choices[0].text;
         document.getElementById('response').innerText = text;
