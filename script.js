@@ -5,12 +5,14 @@ function fetchResponse() {
 
  //   const url = "https://api.openai.com/v1/engines/davinci/completions";
     const url = "https://api.openai.com/v1/chat/completions";
+    
+    const messages = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": prompt}
+    ];
     const body = {
         model: "gpt-3.5-turbo",
-        messages: [
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "Who won the world series in 2020?"}
-            ],
+        messages: messages,
         prompt: prompt,
         max_tokens: 150
     };
