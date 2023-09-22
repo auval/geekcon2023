@@ -13,8 +13,6 @@ function fetchResponse() {
     const body = {
         model: "gpt-3.5-turbo",
         messages: messages,
-        prompt: prompt,
-        max_tokens: 150
     };
 
     fetch(url, {
